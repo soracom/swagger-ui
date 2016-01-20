@@ -12,13 +12,17 @@
         </h3>
         <ul class='options'>
           <li>
-          <a href='#!/{{encodedParentId}}/{{nickname}}' class="toggleOperation">{{{summary}}}</a>
+          <a href='#!/{{encodedParentId}}/{{nickname}}' class="toggleOperation">{{nickname}}</a>
           </li>
         </ul>
       </div>
       <div class='content' id='{{parentId}}_{{nickname}}_content' style='display:none'>
         {{#if deprecated}}
             <h4><span data-sw-translate>Warning: Deprecated</span></h4>
+        {{/if}}
+        {{#if summary}}
+        <h4><span data-sw-translate>Summary</span></h4>
+        <div class="markdown">{{{summary}}}</div>
         {{/if}}
         {{#if description}}
         <h4><span data-sw-translate>Implementation Notes</span></h4>
